@@ -4,7 +4,7 @@
   "description": "task-master ===========",
   "main": "app/index.js",
   "scripts": {
-    "test": "mocha test --recursive -R spec"
+    "test": "mocha test --recursive -R spec",
     "coveralls": "./node_modules/mocha/bin/mocha test --recursive -r blanket -R mocha-lcov-reporter | coveralls"
   },
   "repository": {
