@@ -1,10 +1,10 @@
-/*'use strict';
+'use strict';
 
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('express-method-override'); 
-var task = require('../controllers/task');
-var priority = require('../controllers/priority');
+//var tasks = require('../controllers/tasks');
+var priorities = require('../controllers/priorities');
 
 module.exports =function(app, express){
   app.use(morgan('dev'));
@@ -16,10 +16,12 @@ module.exports =function(app, express){
   app.get('/about', home.about);
   app.get('/faq', home.faq);
   app.get('/contact', home.contact);
+*/
 
-  app.get('/students/new', students.init);
-  app.post('/students', students.create);
-  app.get('/students', students.index);
-  app.get('/students/:id', students.show);
-};*/
+  app.get('/priorities/init', priorities.init);
+  app.post('/priorities', priorities.create);
+  app.get('/priorities', priorities.index);
+  app.get('/priorities/:id', priorities.show);
+};
+
 console.log('Pipeline Configured');

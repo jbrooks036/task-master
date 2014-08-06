@@ -1,0 +1,10 @@
+extends ../shared/template
+block content
+  h2 Priorities
+
+    form(method='post', action='/priorities')
+      input(name='name', type='text', placeholder='high', autofocus=true)
+      input(name='color', type='color')
+      input(name='value', type='number', placeholder='1-10')
+      button Add to Database
+
