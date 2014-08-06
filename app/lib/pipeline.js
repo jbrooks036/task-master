@@ -1,10 +1,10 @@
-'use strict';
+/*'use strict';
 
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('express-method-override'); 
-var home = require('../controllers/home');
-var students = require('../controllers/students');
+var task = require('../controllers/task');
+var priority = require('../controllers/priority');
 
 module.exports =function(app, express){
   app.use(morgan('dev'));
@@ -21,5 +21,5 @@ module.exports =function(app, express){
   app.post('/students', students.create);
   app.get('/students', students.index);
   app.get('/students/:id', students.show);
-*/};
+};*/
 console.log('Pipeline Configured');
