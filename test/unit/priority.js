@@ -31,15 +31,15 @@ describe ('Priority', function() {
   });
 
   describe('constructor', function(){
-      var p2 = new Priority({name:'med', color:'yellow', value:5});
-      it('should create a new Priority object', function(){
-        expect(p2).to.be.instanceof(Priority);
-        expect(p2.name).to.equal('med');
-        expect(p2.color).to.equal('yellow');
-        expect(p2.value).to.equal(5);
-        expect(p2.color).to.equal('yellow');
-      });
+    var p2 = new Priority({name:'med', color:'yellow', value:5});
+    it('should create a new Priority object', function(){
+      expect(p2).to.be.instanceof(Priority);
+      expect(p2.name).to.equal('med');
+      expect(p2.color).to.equal('yellow');
+      expect(p2.value).to.equal(5);
+      expect(p2.color).to.equal('yellow');
     });
+  });
 
   describe('#insert', function(){
     it('should insert a priority', function(done){
@@ -51,7 +51,6 @@ describe ('Priority', function() {
       });
     });
   });
-
 
   describe('.all', function(){
     it('should get all ojects from database', function(done){
@@ -72,6 +71,7 @@ describe ('Priority', function() {
       });
     });
   });
+
 });
 
 
