@@ -3,19 +3,19 @@
 var Priority = require('../models/priority');
 
 exports.init = function(req, res){
-  res.render('priority/init');
+  res.render('priorities/init');
 };
 
 exports.create = function(req, res){
   var priority = new Priority(req.body);
   priority.insert(function(){
-    res.redirect('/priorities/index');
+    res.redirect('/priorities');
   });
 };
 
 exports.index = function(req, res){
-  Priority.all(function(priority){
-    res.render('priorities/index', {priority:priority});
+  Priority.all(function(priorities){
+    res.render('priorities/index', {priorities:priorities});
   });
 };
 

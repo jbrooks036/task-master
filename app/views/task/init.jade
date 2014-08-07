@@ -1,0 +1,19 @@
+extends ../shared/template
+block content
+  h2 Tasks
+
+    form(method='post', action='/task')
+      input(name='name', type='text', placeholder='get milk', autofocus=true)
+      input(name='pic', type='text', placeholder='url')
+      select(name='priorityId')
+         each priority in priorities 
+            option (value='#{priority._id}')#{priority.name}
+      input(name='due', type='date')
+      select(name='tags')
+          option home
+          option work
+          option fun
+          option errands
+          option code
+          option errands 
+      button Add Task

@@ -12,6 +12,5 @@ block content
       each priority in priorities
         tr
           td= priority.name
-          td= priority.color
+          td(style="background-color:#{priority.color}")
           td= priority.value
-
